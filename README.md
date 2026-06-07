@@ -2,6 +2,12 @@
 
 Provides reusable script and stylesheet generation helpers for applying accessible themes, typography, layout utilities, and small progressive-enhancement behaviours to Genova websites.
 
+> [!WARNING]
+> This codebase is part of the Genova platform and should not be considered production-ready. It is published as source for review, experimentation, and reuse within Genova-related projects.
+
+> [!IMPORTANT]
+> A fresh public clone of this repository should not be expected to restore or build without additional Genova infrastructure. Many Genova dependencies are distributed through a private authenticated NuGet feed, and the public source does not include feed credentials or a complete public package graph.
+
 ## Installation
 
 Add a reference to the package, or build the project:
@@ -81,4 +87,4 @@ string script = scriptBuilder.BuildPlain();
 
 ## License
 
-GNU General Public License v3.0
+GNU General Public License v3.0. See the `LICENSE` file for details.
