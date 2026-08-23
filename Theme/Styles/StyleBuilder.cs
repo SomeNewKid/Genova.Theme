@@ -231,6 +231,15 @@ public sealed class StyleBuilder
           overflow-wrap: break-word;
           -webkit-font-smoothing: antialiased;
         }
+
+        html {
+          scroll-behavior: smooth;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          html {
+            scroll-behavior: auto;
+          }
+        }
         """);
         builder.AppendLine();
 
