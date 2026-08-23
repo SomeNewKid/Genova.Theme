@@ -605,20 +605,21 @@ public sealed class StyleBuilder
         {
             builder.AppendLine(Comment("/* External links */"));
             builder.AppendLine("""
-            a[href^="http://"]:after,
-            a[href^="https://"]:after {
+            a[href^="http://"]::after,
+            a[href^="https://"]::after {
               content: '';
               display: inline-block;
               vertical-align: -0.11111em;
-              margin-left: 0.25em;
               width: 0.8333em;
               height: 0.8333em;
+              margin-left: -0.8333em;
+              padding-left: 1.0833em;
               background: currentColor;
               mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M10.5 1a.5.5 0 0 0 0 1h2.793L7.146 8.146a.5.5 0 1 0 .708.708L14 2.707V5.5a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5h-4z"/><path fill="white" d="M13 8a.5.5 0 0 1 .5.5v4A2.5 2.5 0 0 1 11 15H4A2.5 2.5 0 0 1 1.5 12.5V5A2.5 2.5 0 0 1 4 2.5h4a.5.5 0 0 1 0 1H4A1.5 1.5 0 0 0 2.5 5v7.5A1.5 1.5 0 0 0 4 14h7a1.5 1.5 0 0 0 1.5-1.5v-4a.5.5 0 0 1 .5-.5z"/></svg>');
               mask-size: contain;
               mask-repeat: no-repeat;
-              mask-position: center;
-            }            
+              mask-position: right center;
+            }        
             """);
             builder.AppendLine();
         }
