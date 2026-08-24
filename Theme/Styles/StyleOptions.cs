@@ -40,6 +40,11 @@ public sealed class StyleOptions
     public bool UseStickyFooter { get; set; } = false;
 
     /// <summary>
+    /// Gets or sets a value indicating whether to use smooth scrolling.
+    /// </summary>
+    public bool UseSmoothScrolling { get; set; } = false;
+
+    /// <summary>
     /// Gets or sets a value indicating whether to use bumping utility classes.
     /// </summary>
     public bool UseBumping { get; set; } = false;

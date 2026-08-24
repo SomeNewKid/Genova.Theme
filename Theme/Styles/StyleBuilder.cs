@@ -231,17 +231,23 @@ public sealed class StyleBuilder
           overflow-wrap: break-word;
           -webkit-font-smoothing: antialiased;
         }
-
-        html {
-          scroll-behavior: smooth;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          html {
-            scroll-behavior: auto;
-          }
-        }
         """);
         builder.AppendLine();
+
+        if (_options.UseSmoothScrolling)
+        {
+            builder.AppendLine("""
+            html {
+              scroll-behavior: smooth;
+            }
+            @media (prefers-reduced-motion: reduce) {
+              html {
+                scroll-behavior: auto;
+              }
+            }
+            """);
+            builder.AppendLine();
+        }
 
         builder.AppendLine(Comment("/* Headings */"));
         builder.AppendLine("""
