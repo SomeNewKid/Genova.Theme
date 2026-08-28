@@ -22,7 +22,7 @@ public class StyleBuilder_Tests
     public void BuildEssential_includes_essentials()
     {
         // Arrange
-        StyleOptions styleOptions = new() { Commentary = true };
+        StyleOptions styleOptions = new() { Commentary = true, Condense = false };
         StyleBuilder styleBuilder = new(styleOptions);
 
         // Act
