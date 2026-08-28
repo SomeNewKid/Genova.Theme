@@ -385,6 +385,8 @@ public sealed class StyleBuilder
         """);
         builder.AppendLine();
 
+        builder.AppendLine($".layout-container {{ max-width: {_options.LargeBreakpoint}px; }}");
+        builder.AppendLine();
         if (_options.UseLayoutColumns)
         {
             GenerateColumns(builder);
@@ -400,8 +402,6 @@ public sealed class StyleBuilder
 
     private static void AppendBaseColumnStyles(StringBuilder builder, decimal columnGap, int largeBreakpoint)
     {
-        builder.AppendLine($".layout-container {{ max-width: {largeBreakpoint}px; }}");
-        builder.AppendLine();
         builder.AppendLine("[class^=\"layout-cols\"] {");
         builder.AppendLine("  display: flex;");
         builder.AppendLine("  flex-wrap: wrap;");
