@@ -22,12 +22,12 @@ public sealed class StyleOptions
     /// <remarks>
     /// Applies only to the essential CSS which appears in the &lt;head&gt; of the HTML document.
     /// </remarks>
-    public bool Condense { get; set; } = false;
+    public bool Condense { get; set; } = true;
 
     /// <summary>
     /// Gets or sets a value indicating whether to include the button which controls the header navigation.
     /// </summary>
-    public bool UseHeaderMenuButton { get; set; } = true;
+    public bool UseHeaderMenuButton { get; set; } = false;
 
     /// <summary>
     /// Gets or sets a value indicating whether add an icon to external links.
