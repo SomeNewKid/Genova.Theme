@@ -50,6 +50,11 @@ public sealed class StyleOptions
     public bool UseBumping { get; set; } = false;
 
     /// <summary>
+    /// Gets or sets a value indicating whether to use a layout container.
+    /// </summary>
+    public bool UseLayoutContainer { get; set; } = true;
+
+    /// <summary>
     /// Gets or sets a value indicating whether to use layout columns.
     /// </summary>
     public bool UseLayoutColumns { get; set; } = false;

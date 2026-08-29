@@ -385,8 +385,12 @@ public sealed class StyleBuilder
         """);
         builder.AppendLine();
 
-        builder.AppendLine($".layout-container {{ max-width: {_options.LargeBreakpoint}px; }}");
-        builder.AppendLine();
+        if (_options.UseLayoutContainer)
+        {
+            builder.AppendLine($".layout-container {{ max-width: {_options.LargeBreakpoint}px; }}");
+            builder.AppendLine();
+        }
+
         if (_options.UseLayoutColumns)
         {
             GenerateColumns(builder);
